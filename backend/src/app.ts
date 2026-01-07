@@ -1,8 +1,9 @@
 import express from "express";
+import router from "./routes/health.routes";
 
 const app = express();
 
-app.use(express.json());
+app.use("/health", router);
 
 app.get("/healt", (req, res) => {
   res.json({status: "ok"});
